@@ -13,6 +13,7 @@ You want to make sure that the Idea configuration exactly matches the _License M
 #### Maven Configuration
 Example configuration for the _License Maven Plugin_ in the (parent) pom of the project: 
 
+```xml
     <properties>
         <owner.name>Martin Trummer</owner.name>
         <owner.email>martin.trummer@tmtron.com</owner.email>
@@ -62,9 +63,10 @@ Example configuration for the _License Maven Plugin_ in the (parent) pom of the 
             </plugin>
         </plugins>
      </build>
-     
+```
+
 Notes:
- * the `icense-maven-plugin` must define a dependency to `license-maven-plugin-config`, so that the `idea-xml-header.xml` file can be found from the classpath.
+ * the `license-maven-plugin` must define a dependency to `license-maven-plugin-config`, so that the [idea-xml-header.xml](src/main/resources/idea-xml-header.xml) file can be found from the classpath.
  * we must add a `headerDefinition` item, to read the `idea-xml-header.xml` file
  * finally we can use the `idea_xml_style` for the xml-mapping.
  * we also add an execution section, so that the license-check will be done during the maven [verify](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) build phase  
@@ -77,7 +79,7 @@ When you want to add missing file-headers to your project files, just run:
 ### Idea configuration
 1. _File_ - _Settings_ - _Copyright_- _Copyright profiles_
    * Click the + button and add a new profile called `Apache2`
-   * Add the copyright text - see section _Idea Copyright Text_ below        
+   * Add the copyright text - see section [Idea Copyright Text](#idea-copyright-text) below        
 1. _File_ - _Settings_ - _Copyright_  
    _Default project copyright_: select `Apache2`  
     
@@ -86,22 +88,23 @@ Notes:
  * we use the copyright symbol, because the _License Maven Plugin_ also replaces (C) with the symbol automatically.
  * we use the `$today.year` variable in this template
  * this text must exactly match whath the _License Maven Plugin_ expects. 
-   
-   Copyright © $today.year Martin Trummer (martin.trummer@tmtron.com)
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+```
+Copyright © $today.year Martin Trummer (martin.trummer@tmtron.com)
 
-   http://www.apache.org/licenses/LICENSE-2.0
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+    http://www.apache.org/licenses/LICENSE-2.0
 
- 
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
 ## Details
 
 The configuration is required because the _License Maven Plugin_ and Idea use different formats for the copyright in XML headers.
