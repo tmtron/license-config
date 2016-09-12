@@ -4,7 +4,7 @@
 
     <groupId>com.tmtron</groupId>
     <artifactId>license-maven-plugin-config</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>License Maven Plugin Configuration</name>
@@ -39,7 +39,7 @@
         <connection>scm:git:https://github.com/tmtron/${github.project.name}.git</connection>
         <developerConnection>scm:git:https://github.com/tmtron/${github.project.name}.git</developerConnection>
         <url>https://github.com/tmtron/${github.project.name}</url>
-      <tag>license-maven-plugin-config-1.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
