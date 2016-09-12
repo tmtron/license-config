@@ -38,8 +38,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git://github.com/tmtron/${github.project.name}.git</connection>
-        <developerConnection>scm:git:git@github.com:tmtron/${github.project.name}.git</developerConnection>
+        <connection>scm:git:https://github.com/tmtron/${github.project.name}.git</connection>
+        <developerConnection>scm:git:https://github.com/tmtron/${github.project.name}.git</developerConnection>
         <url>https://github.com/tmtron/${github.project.name}</url>
     </scm>
 
