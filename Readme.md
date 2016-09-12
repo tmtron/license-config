@@ -29,7 +29,7 @@ Example configuration for the _License Maven Plugin_ in the (parent) pom of the 
                     <dependency>
                         <groupId>com.tmtron</groupId>
                         <artifactId>license-maven-plugin-config</artifactId>
-                        <version>1.0-SNAPSHOT</version>
+                        <version>1.0.0</version>
                     </dependency>
                 </dependencies>
     
